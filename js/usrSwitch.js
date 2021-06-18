@@ -1,6 +1,9 @@
 const template = document.createElement('template');
 template.innerHTML = `
     <style>
+        .usrSwitch-container {
+            background-color: darkgreen;
+        }
     </style>
     <div class="usrSwitch-container">
         <div class="usrSwitch-state"></div>

@@ -1,10 +1,12 @@
 <html>
-    <head></head>
+    <head>
+        <link rel="stylesheet" href="css/main.css"/>
+    </head>
     <body>
-        <h1>Hello World</h1>
         <div class="canvas">
-            <usr-switch name="Hang"></usr-switch>
-            <usr-switch name="Hecke"></usr-switch>
+            <usr-switch class="switch" name="Hang" symbol="img/water_drop_white_48dp.svg" style="grid-area: 2/2/span 1/span 1" ></usr-switch>
+            <usr-switch class="switch" name="Hecke" symbol="img/water_drop_white_48dp.svg" style="grid-area:2/4/span 1/span 3" ></usr-switch>
+            <div style="grid-area: 3/2/span 1/span 1;">noch 90 min.</div>
         </div>
         <script src="js/usrSwitch.js"></script>
     </body>

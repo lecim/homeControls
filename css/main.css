@@ -1,6 +1,56 @@
-.canvas {
-    display: grid;
-    height: 100px;
-    grid-template-columns: 100px 100px;
-    gap: 10px;
+:root {
+    --bg-color: black;
+    --btn-color: blue;
+    --btn-color-on: yellow;
+    --btn-color-off: grey;
+    --btn-color-label: white;
 }
+
+font-face {
+    font-family: 'roboto';
+    src: url('/fonts/Roboto-MediumItalic.ttf');
+}
+font-face {
+    font-family: 'roboto-black';
+    src: url('/fonts/Roboto-Black.ttf');
+}
+
+body {
+    font-family:'roboto', Verdana, sans-serif;
+    color: var(--btn-color-label);
+}
+
+.canvas {
+    min-width: 800px;
+    width: 800px;
+    min-height: 800px;
+    height: 800px;
+    overflow: hidden;
+    background-color: var(--bg-color);
+    display: grid;
+    grid-template-columns: 16px repeat(7, 90px 22px);
+    grid-template-rows: 16px repeat(5,90px 11px 11px) 4px;
+
+}
+
+.gridGarden {
+    grid-template-areas: 
+    "... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ..."
+    "... i11 ... i12 ... ... ... ... ... ... ... ... ... ... ... ..."
+    "... s11 ... s12 ... ... ... ... ... ... ... ... ... ... ... ..."
+    "... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ..."
+    "... i21 ... i22 ... ... ... ... ... ... ... ... ... ... ... ..."
+    "... s21 ... s22 ... ... ... ... ... ... ... ... ... ... ... ..."
+    "... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ..."
+    "... i31 ... i32 ... ... ... ... ... ... ... ... ... ... ... ..."
+    "... s31 ... s32 ... ... ... ... ... ... ... ... ... ... ... ..."
+    "... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ..."
+    "... i41 ... i42 ... ... ... ... ... ... ... ... ... ... ... ..."
+    "... s41 ... s42 ... ... ... ... ... ... ... ... ... ... ... ..."
+    "... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ..."
+    "... i51 ... i52 ... ... ... ... ... ... ... ... ... ... ... ..."
+    "... s51 ... s52 ... ... ... ... ... ... ... ... ... ... ... ..."
+    "... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ..."
+    ;
+}
+

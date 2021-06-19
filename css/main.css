@@ -1,9 +1,11 @@
 :root {
-    --bg-color: black;
-    --btn-color: blue;
-    --btn-color-on: yellow;
-    --btn-color-off: grey;
-    --btn-color-label: white;
+    --c-bg: black;
+    --c1-p1: blue;
+    --c1-p2: darkblue;
+    --c1-p3: lightblue;
+    --c2-p1: yellow;
+    --c2-p2: grey;
+    --c3-p1: white;
 }
 
 font-face {
@@ -17,7 +19,7 @@ font-face {
 
 body {
     font-family:'roboto', Verdana, sans-serif;
-    color: var(--btn-color-label);
+    color: var(--c-bg);
 }
 
 .canvas {
@@ -26,15 +28,16 @@ body {
     min-height: 800px;
     height: 800px;
     overflow: hidden;
-    background-color: var(--bg-color);
+    background-color: var(--c-bg);
     display: grid;
-    grid-template-columns: 16px repeat(7, 90px 22px);
-    grid-template-rows: 16px repeat(5,90px 11px 11px) 4px;
+    grid-template-columns: 22px repeat(7, 90px 21px) 1px;
+    grid-template-rows: 50px 4px repeat(4,90px 30px 4px) 50px;
 
 }
 
 .gridGarden {
     grid-template-areas: 
+    "... tit tit tit tit tit tit tit tit tit ... inf inf inf inf ..."
     "... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ..."
     "... i11 ... i12 ... ... ... ... ... ... ... ... ... ... ... ..."
     "... s11 ... s12 ... ... ... ... ... ... ... ... ... ... ... ..."
@@ -48,9 +51,22 @@ body {
     "... i41 ... i42 ... ... ... ... ... ... ... ... ... ... ... ..."
     "... s41 ... s42 ... ... ... ... ... ... ... ... ... ... ... ..."
     "... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ..."
-    "... i51 ... i52 ... ... ... ... ... ... ... ... ... ... ... ..."
-    "... s51 ... s52 ... ... ... ... ... ... ... ... ... ... ... ..."
-    "... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ..."
+    "b00 b01 b01 b02 b02 b03 b03 b04 b04 b05 b05 b06 b06 b99 b99 b99"
     ;
+}
+
+.gridTitle {
+    font-size: 1.6em;
+    font-family: 'roboto';
+    color: var(--c1-p3);
+    grid-area: tit;
+    display: flex;
+    justify-content: left;
+}
+
+.gridInfo {
+    grid-area: inf;
+    display: flex;
+    flex-direction: row;
 }
 

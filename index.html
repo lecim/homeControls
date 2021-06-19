@@ -3,10 +3,15 @@
         <link rel="stylesheet" href="css/main.css"/>
     </head>
     <body>
-        <div class="canvas">
-            <usr-switch class="switch" name="Hang" symbol="img/water_drop_white_48dp.svg" style="grid-area: 2/2/span 1/span 1" ></usr-switch>
-            <usr-switch class="switch" name="Hecke" symbol="img/water_drop_white_48dp.svg" style="grid-area:2/4/span 1/span 3" ></usr-switch>
-            <div style="grid-area: 3/2/span 1/span 1;">noch 90 min.</div>
+        <div class="canvas gridGarden">
+            <div class="gridTitle">Garten</div>
+            <div class="gridInfo">
+                <div>12.12.21</div>
+                <div>11:00:00</div>
+            </div>
+            <usr-switch class="switch" name="Hang" symbol="img/water_drop_white_48dp.svg" style="grid-area: i11" ></usr-switch>
+            <usr-switch class="switch" name="Hecke" symbol="img/water_drop_white_48dp.svg" style="grid-area: i12" ></usr-switch>
+            <div style="grid-area: s11; font-size: 1rem;">noch 90 min.</div>
         </div>
         <script src="js/usrSwitch.js"></script>
     </body>
